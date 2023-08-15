@@ -14,7 +14,7 @@ class User extends Authenticatable
 
     protected $table = 'users';
 
-    public static $ROLE = ['admin', 'operator'];
+    public static $ROLE = ['admin', 'karyawan'];
 
     /**
      * The attributes that are mass assignable.
@@ -24,7 +24,7 @@ class User extends Authenticatable
     protected $fillable = [
         'nama',
         'username',
-        'pasword',
+        'password',
         'nik',
         'unit_kerja',
         'alamat',

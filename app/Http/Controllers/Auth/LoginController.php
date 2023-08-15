@@ -18,7 +18,7 @@ class LoginController extends Controller
     public function postLogin(LoginRequest $request)
     {
         try {
-            if (! Auth::attempt($request->only('username', 'password'), $request->filled('remember_me'))) {
+            if (! Auth::attempt($request->only('nik', 'password'), $request->filled('remember_me'))) {
                 return redirect()
                     ->back()
                     ->withErrors([

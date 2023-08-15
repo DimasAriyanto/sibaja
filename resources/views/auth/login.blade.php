@@ -35,12 +35,12 @@
 
                 <form acton="{{ route('auth.post-login') }}" method="post">
                     @csrf
-                    <div class="mb-4">
-                        <label for="username" class="form-label">Username*</label>
-                        <input type="username" name="username" class="form-control" @error('username') is-invalid @enderror
-                            id="username" placeholder="Enter Your Username..." autofocus required
-                            value={{ old('username') }}>
-                        @error('username')
+                    <div class="mb-3">
+                        <label for="nik" class="form-label">nik*</label>
+                        <input type="nik" name="nik" class="form-control" @error('nik') is-invalid @enderror
+                            id="nik" placeholder="Enter Your nik..." autofocus required
+                            value={{ old('nik') }}>
+                        @error('nik')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>

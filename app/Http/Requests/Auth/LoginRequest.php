@@ -23,7 +23,7 @@ class LoginRequest extends FormRequest
     {
         return [
             'remember_me' => 'nullable',
-            'username' => 'required',
+            'nik' => 'required',
             'password' => 'required',
         ];
     }

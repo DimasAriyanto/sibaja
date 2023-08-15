@@ -24,7 +24,7 @@ class UserFactory extends Factory
             'nik' => fake()->unique()->numberBetween(16, true),
             'unit_kerja' => fake()->word,
             'alamat' => fake()->address,
-            'role' => fake()->randomElement(['operator', 'admin']),
+            'role' => fake()->randomElement(['karyawan', 'admin']),
         ];
     }
 
@@ -38,10 +38,10 @@ class UserFactory extends Factory
         ]);
     }
 
-    public function operator(): static
+    public function karyawan(): static
     {
         return $this->state(fn (array $attributes) => [
-            'role' => 'operator',
+            'role' => 'karyawan',
         ]);
     }
 }

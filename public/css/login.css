@@ -13,7 +13,7 @@
     border-radius: 30px;
 }
 
-input[type="email"],
+input[type="nik"],
 input[type="password"] {
     border-radius: 20px;
     border: 2px solid rgb(224, 224, 224);

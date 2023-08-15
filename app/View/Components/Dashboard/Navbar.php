@@ -4,18 +4,19 @@ namespace App\View\Components\Dashboard;
 
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\Component;
 
-class Layout extends Component
+class Navbar extends Component
 {
-    public $title = 'Dashboard';
+    public $user;
 
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
-        //
+        $this->user = Auth::user();
     }
 
     /**
@@ -23,6 +24,6 @@ class Layout extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.dashboard.layout');
+        return view('components.dashboard.navbar');
     }
 }
